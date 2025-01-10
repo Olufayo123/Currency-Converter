@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4C2B3B5-98F8-49FB-8820-B0EEEC7994E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Currency_Converter</RootNamespace>
+    <AssemblyName>Currency Converter</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.13.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.13.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ListViewColumnSorter+SortModifiers.datasource" />
+    <None Include="Properties\DataSources\ListViewColumnSorter.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Animation.AnimationAction.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Animation.AnimationBase.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Animation.AnimationFinishedEvaluator.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Animation.ColorBlendAnimation.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Animation.ExpandAnimation.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Animation.MoveAnimation.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Components.MetroStyleExtender.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Components.MetroStyleManager.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Components.MetroToolTip.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.HiddenTabs.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroButton.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroCheckBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroComboBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroContextMenu.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroDataGridHelper.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroDateTime.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroGrid.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroLabel.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroLink.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroListView+ScrollBarCommands.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroListView+ScrollPositionChangedDelegate.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroListView.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroPanel.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroProgressBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroProgressSpinner.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroRadioButton.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroScrollBar+ScrollValueChangedDelegate.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroScrollBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTabControl.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTabPage.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTabPageCollection.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTextBox+ButClick.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTextBox+LUClear.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTextBox+MetroTextButton.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTextBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTile.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroToggle.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTrackBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroUserControl.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssAnonymousBlockBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssAnonymousBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssAnonymousSpaceBlockBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssAnonymousSpaceBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssBlock.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssConstants.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssDefaults.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssLength+CssUnit.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssLength.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssPropertyAttribute.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssPropertyInheritedAttribute.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssRectangle.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssValue.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.HtmlConstants.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.HtmlLabel.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.HtmlPanel.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.HtmlRenderer.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.HtmlTag.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.HtmlToolTip.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.InitialContainer.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+Button.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+ProgressBar+Bar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+ProgressBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+ScrollBar+Bar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+ScrollBar+Thumb.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+ScrollBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+TrackBar+Bar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+TrackBar+Thumb.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+TrackBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BorderColor+Button.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BorderColor+CheckBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BorderColor+ComboBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BorderColor+ProgressBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BorderColor+TabControl.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BorderColor.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+Button.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+CheckBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+ComboBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+Label.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+Link.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+ProgressBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+TabControl.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+Tile.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaintEventArgs.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Fonts.FontResolver.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Forms.MetroForm.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Forms.MetroTaskWindow.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Interfaces.IMetroComponent.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Interfaces.IMetroControl.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Interfaces.IMetroForm.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.MetroBrushes.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.MetroColors.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.MetroFonts.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.MetroMessageBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.MetroMessageBoxControl.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.MetroMessageBoxProperties.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.MetroPens.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Authenticators.AuthenticatorBase.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Authenticators.HttpBasicAuthenticator.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Authenticators.IAuthenticator.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Authenticators.JwtAuthenticator.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Authenticators.NtlmAuthenticator.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Authenticators.OAuth1Authenticator.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Authenticators.OAuth2Authenticator.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Authenticators.OAuth2AuthorizationRequestHeaderAuthenticator.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Authenticators.OAuth2UriQueryParameterAuthenticator.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Authenticators.SimpleAuthenticator.datasource" />
+    <None Include="Properties\DataSources\RestSharp.DateFormat.datasource" />
+    <None Include="Properties\DataSources\RestSharp.DeserializationException.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Deserializers.DeserializeAsAttribute.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Deserializers.DotNetXmlDeserializer.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Deserializers.IDeserializer.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Deserializers.XmlDeserializer.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Extensions.MiscExtensions.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Extensions.ReflectionExtensions.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Extensions.ResponseExtensions.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Extensions.ResponseStatusExtensions.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Extensions.RSACryptoServiceProviderExtensions.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Extensions.StringEncodingExtensions.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Extensions.StringExtensions.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Extensions.WebRequestExtensions.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Extensions.XmlExtensions.datasource" />
+    <None Include="Properties\DataSources\RestSharp.FileParameter.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Http.datasource" />
+    <None Include="Properties\DataSources\RestSharp.HttpCookie.datasource" />
+    <None Include="Properties\DataSources\RestSharp.HttpFile.datasource" />
+    <None Include="Properties\DataSources\RestSharp.HttpHeader.datasource" />
+    <None Include="Properties\DataSources\RestSharp.HttpParameter.datasource" />
+    <None Include="Properties\DataSources\RestSharp.HttpResponse.datasource" />
+    <None Include="Properties\DataSources\RestSharp.IHttp.datasource" />
+    <None Include="Properties\DataSources\RestSharp.IHttpResponse.datasource" />
+    <None Include="Properties\DataSources\RestSharp.IJsonSerializerStrategy.datasource" />
+    <None Include="Properties\DataSources\RestSharp.IRestClient.datasource" />
+    <None Include="Properties\DataSources\RestSharp.IRestRequest.datasource" />
+    <None Include="Properties\DataSources\RestSharp.IRestResponse.datasource" />
+    <None Include="Properties\DataSources\RestSharp.JsonArray.datasource" />
+    <None Include="Properties\DataSources\RestSharp.JsonObject.datasource" />
+    <None Include="Properties\DataSources\RestSharp.JsonParameter.datasource" />
+    <None Include="Properties\DataSources\RestSharp.NameValuePair.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Parameter.datasource" />
+    <None Include="Properties\DataSources\RestSharp.PocoJsonSerializerStrategy.datasource" />
+    <None Include="Properties\DataSources\RestSharp.RequestBody.datasource" />
+    <None Include="Properties\DataSources\RestSharp.RestClient.datasource" />
+    <None Include="Properties\DataSources\RestSharp.RestClientExtensions.datasource" />
+    <None Include="Properties\DataSources\RestSharp.RestRequest.datasource" />
+    <None Include="Properties\DataSources\RestSharp.RestRequestAsyncHandle.datasource" />
+    <None Include="Properties\DataSources\RestSharp.RestResponse.datasource" />
+    <None Include="Properties\DataSources\RestSharp.RestResponseBase.datasource" />
+    <None Include="Properties\DataSources\RestSharp.RestResponseCookie.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Serialization.ContentType.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Serialization.IRestSerializer.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Serialization.IWithRootElement.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Serialization.Json.JsonDeserializer.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Serialization.Json.JsonSerializer.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Serialization.Xml.DotNetXmlSerializerClientExtensions.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Serialization.Xml.IXmlDeserializer.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Serialization.Xml.IXmlSerializer.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Serialization.Xml.XmlAttributeDeserializer.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Serialization.Xml.XmlRestSerializer.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Serialization.Xml.XmlSerilizationOptions.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Serializers.DotNetXmlSerializer.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Serializers.ISerializer.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Serializers.SerializeAsAttribute.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Serializers.XmlSerializer.datasource" />
+    <None Include="Properties\DataSources\RestSharp.SimpleJson.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Validation.Ensure.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Validation.Require.datasource" />
+    <None Include="Properties\DataSources\RestSharp.Validation.Validate.datasource" />
+    <None Include="Properties\DataSources\RestSharp.XmlParameter.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
